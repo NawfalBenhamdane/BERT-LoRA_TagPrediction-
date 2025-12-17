@@ -1,0 +1,72 @@
+# Configuration for RAG+BERT Code Classification System
+
+# Paths
+data:
+  data_dir: "data/code_classification_dataset_cleaned"
+  output_dir: "outputs/retrieval_model"
+  
+# Target Tags
+target_tags:
+  - "math"
+  - "graphs"
+  - "strings"
+  - "number theory"
+  - "trees"
+  - "geometry"
+  - "games"
+  - "probabilities"
+
+# Tag Descriptions
+tag_descriptions:
+  math: "This problem requires mathematical reasoning, formulas, algebra, or number theory concepts"
+  graphs: "This problem involves graph theory, nodes, edges, paths, trees, or network structures"
+  strings: "This problem deals with string manipulation, pattern matching, or text processing"
+  number theory: "This problem requires understanding of prime numbers, divisibility, modular arithmetic, or number properties"
+  trees: "This problem involves tree data structures, hierarchical relationships, or tree traversal"
+  geometry: "This problem requires geometric reasoning, coordinates, shapes, or spatial relationships"
+  games: "This problem involves game theory, optimal strategies, or competitive scenarios"
+  probabilities: "This problem requires probability theory, statistics, or randomness analysis"
+
+# Model Configuration
+model:
+  base_model_name: "bert-base-uncased"
+  max_length: 256
+  embedding_dim: 768
+  projection_dim: 128
+  cross_encoder_hidden_dim: 128
+
+# Contrastive Learning
+contrastive:
+  temperature: 0.07
+  margin: 0.5
+
+# Retrieval
+retrieval:
+  top_k: 10
+  alpha: 0.6  # Weight for retrieval scores
+  beta: 0.4   # Weight for cross-encoder scores
+
+# Training Configuration
+training:
+  batch_size: 4
+  learning_rate: 0.00002
+  num_epochs_contrastive: 3
+  num_epochs_cross: 3
+  gradient_clip_max_norm: 1.0
+  num_workers: 2
+
+# Data Split
+split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_state: 42
+
+# Device
+device: "cuda"  # or "cpu"
+
+# Logging
+logging:
+  log_level: "INFO"
+  save_plots: true
+  plot_dpi: 300
