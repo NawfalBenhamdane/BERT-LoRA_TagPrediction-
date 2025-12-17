@@ -354,42 +354,8 @@ training:
 - Increase `top_k` for retrieval
 - Check data quality and distribution
 
-## 📝 Citation
 
-If you use this code in your research, please cite:
 
-```bibtex
-@software{rag_bert_classification,
-  title={RAG+BERT Code Classification System},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/BERT_RAG}
-}
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📧 Contact
-
-For questions or issues, please open an issue on GitHub or contact [your-email@example.com]
-
-## 🙏 Acknowledgments
-
-- Hugging Face Transformers
-- FAISS by Facebook AI Research
-- PyTorch team
-- The open-source community
 
 ---
 
